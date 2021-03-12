@@ -1,6 +1,9 @@
 # template for "Stopwatch: The Game"
 # Import needed libraries and modules
-import simplegui
+try:
+    import simplegui
+except ImportError:
+    import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 # Define global variables
 t = 0

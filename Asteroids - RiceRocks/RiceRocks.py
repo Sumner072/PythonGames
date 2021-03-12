@@ -1,8 +1,11 @@
 # implementation of Spaceship - program template for RiceRocks
-import simplegui
-# Replace with tkinter throughout code then delete this line and the "import simplegui"
 import math
 import random
+
+try:
+    import simplegui
+except ImportError:
+    import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 # globals for user interface
 WIDTH = 800

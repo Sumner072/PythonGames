@@ -1,7 +1,11 @@
 # Implementation of classic arcade game Pong
 
-import simplegui
 import random
+
+try:
+    import simplegui
+except ImportError:
+    import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 # initialize globals - pos and vel encode vertical info for paddles
 WIDTH = 600
@@ -96,7 +100,7 @@ def draw(canvas):
     else:
         paddle2_pos += paddle2_vel
 
-    # Left Paddle Up  with restratints
+    # Left Paddle Up  with restraints
     if (paddle1_pos + HALF_PAD_HEIGHT) >= HEIGHT:
         paddle1_pos = HEIGHT - HALF_PAD_HEIGHT
     else:

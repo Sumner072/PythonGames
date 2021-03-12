@@ -14,7 +14,11 @@
 # Imports
 import math
 import random
-import simplegui
+
+try:
+    import simplegui
+except ImportError:
+    import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 # Global Variables
 secret_number = 0
